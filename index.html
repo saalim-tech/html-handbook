@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Handbook | By Saalim Pathan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML Learning</h1>
+
+        <input type="search" id="search" placeholder="Search lessons..." autocomplete="off">
+    </header>
+
+    <main>
+
+        <aside>
+
+            <details open>
+                <summary>Introduction</summary>
+
+                <button data-lesson="browser">Browser</button>
+                <button data-lesson="html">What is HTML?</button>
+                <button data-lesson="uses">Uses of HTML</button>
+                <button data-lesson="roadmap">Learning Roadmap</button>
+            </details>
+
+            <details>
+                <summary>HTML Basics</summary>
+
+                <button data-lesson="boilerplate">HTML Boilerplate</button>
+                <button data-lesson="head">Head Tag</button>
+                <button data-lesson="body">Body Tag</button>
+            </details>
+
+            <details>
+                <summary>Text</summary>
+
+                <button data-lesson="headings">Headings</button>
+                <button data-lesson="paragraph">Paragraph</button>
+                <button data-lesson="formatting">Text Formatting</button>
+                <button data-lesson="comments">Comments</button>
+            </details>
+
+            <details>
+                <summary>Links</summary>
+
+                <button data-lesson="anchor">Anchor Tag</button>
+            </details>
+
+            <details>
+                <summary>Images</summary>
+
+                <button data-lesson="image">Image Tag</button>
+            </details>
+
+            <details>
+                <summary>Lists</summary>
+
+                <button data-lesson="ordered-list">Ordered List</button>
+                <button data-lesson="unordered-list">Unordered List</button>
+                <button data-lesson="description-list">Description List</button>
+            </details>
+
+            <details>
+                <summary>Tables</summary>
+
+                <button data-lesson="table">Table</button>
+            </details>
+
+            <details>
+                <summary>Forms</summary>
+
+                <button data-lesson="form">Form</button>
+            </details>
+
+            <details>
+                <summary>Semantic Tags</summary>
+
+                <button data-lesson="header">Header</button>
+                <button data-lesson="nav">Nav</button>
+                <button data-lesson="main">Main</button>
+                <button data-lesson="section">Section</button>
+                <button data-lesson="article">Article</button>
+                <button data-lesson="aside">Aside</button>
+                <button data-lesson="footer">Footer</button>
+            </details>
+            <div class="creator-box">
+                <h4>HTML Handbook</h4>
+                <p>Version 1.0</p>
+
+                <hr>
+
+                <small>Designed & Developed by</small>
+
+                <h3>Saalim Pathan</h3>
+
+                <small>2026</small>
+            </div>
+
+        </aside>
+
+        <section id="content">
+
+            <h2 id="lesson-title">Welcome to HTML Learning</h2>
+
+            <article id="lesson">
+                <h3>Lesson</h3>
+                <div id="lesson-content"></div>
+            </article>
+
+            <article id="exercise">
+                <h3>Exercise</h3>
+                <div id="exercise-content"></div>
+            </article>
+
+            <article id="answer">
+                <h3>Answer</h3>
+
+                <button id="answer-btn">
+                    Show Answer
+                </button>
+
+                <div id="answer-content" hidden></div>
+            </article>
+
+            <article id="practice">
+                <h3>Try It Yourself</h3>
+
+                <textarea id="editor" placeholder="Write your HTML code here..."></textarea>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Made by Saalim Pathan | HTML Learning Website | 2026</p>
+    </footer>
+
+    <script src="lesson.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
