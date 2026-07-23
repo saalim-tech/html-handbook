@@ -46,7 +46,7 @@ function loadLesson(id) {
 
         answerContent.hidden = true;
 
-        answerButton.textContent = "Show Answer";
+        answerButton.textContent = "👁 Show Answer";
 
         currentLesson = null;
 
@@ -59,13 +59,15 @@ function loadLesson(id) {
 
     lessonContent.innerHTML = currentLesson.content;
 
+    setupCopyButtons();
+
     exerciseContent.innerHTML = currentLesson.exercise;
 
     answerContent.innerHTML = currentLesson.answer;
 
     answerContent.hidden = true;
 
-    answerButton.textContent = "Show Answer";
+    answerButton.textContent = "👁 Show Answer";
 
     highlightButton(id);
 
@@ -104,7 +106,7 @@ function toggleAnswer() {
 
         answerContent.hidden = false;
 
-        answerButton.textContent = "Hide Answer";
+        answerButton.textContent = "🙈 Hide Answer";
 
     }
 
@@ -112,7 +114,7 @@ function toggleAnswer() {
 
         answerContent.hidden = true;
 
-        answerButton.textContent = "Show Answer";
+        answerButton.textContent = "👁 Show Answer";
 
     }
 
@@ -204,5 +206,109 @@ searchBox.addEventListener("keydown", (event) => {
 /* ===========================================
    Console Message
 ===========================================*/
+
+/* ===========================================
+   Copy Code Buttons
+===========================================*/
+
+function setupCopyButtons() {
+
+    const codeBlocks = document.querySelectorAll("#lesson-content pre");
+
+    codeBlocks.forEach(pre => {
+
+                // Don't create another header if one already exists
+        if (
+            pre.previousElementSibling &&
+            pre.previousElementSibling.classList.contains("code-header")
+        ) {
+            return;
+        }
+
+        const button = document.createElement("button");
+
+        button.innerHTML = "📋 <span>Copy</span>";
+
+        button.className = "copy-btn";
+
+        button.addEventListener("click", () => {
+
+            const code = pre.innerText;
+
+            navigator.clipboard.writeText(code);
+
+            button.innerHTML = "✅ <span>Copied</span>";
+
+            setTimeout(() => {
+
+               button.innerHTML = "📋 <span>Copy</span>";
+
+            }, 2000);
+
+        });
+
+        const header = document.createElement("div");
+
+        header.className = "code-header";
+
+        const title = document.createElement("span");
+
+        title.textContent = `${currentLesson.title} Example`;
+
+        header.appendChild(title);
+
+        header.appendChild(button);
+
+        pre.parentNode.insertBefore(header, pre);
+
+    });
+
+}
+/* ===========================================
+   Random HTML Tip
+===========================================*/
+
+const tips = [
+
+"💡 Always use semantic HTML whenever possible.",
+
+"💡 Use only one <h1> on a webpage.",
+
+"💡 Every image should have an alt attribute.",
+
+"💡 Indent your HTML code to keep it readable.",
+
+"💡 Comments help developers understand code.",
+
+"💡 Use lowercase tag names for better consistency.",
+
+"💡 Validate your HTML to avoid hidden errors.",
+
+"💡 Keep your HTML structure clean before adding CSS."
+
+];
+
+const tipBox = document.getElementById("daily-tip");
+
+tipBox.textContent = tips[Math.floor(Math.random()*tips.length)];
+/* ===========================================
+   Reading Progress
+===========================================*/
+
+const progressBar = document.getElementById("progress-bar");
+
+const content = document.getElementById("content");
+
+content.addEventListener("scroll", () => {
+
+    const scrollTop = content.scrollTop;
+
+    const height = content.scrollHeight - content.clientHeight;
+
+    const progress = (scrollTop / height) * 100;
+
+    progressBar.style.width = progress + "%";
+
+});
 
 console.log("HTML Learning Engine Loaded Successfully");
