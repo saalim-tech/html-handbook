@@ -424,3 +424,151 @@ footer{
     color:#94A3B8;
 
 }
+
+
+/* ==========================
+   Code Block Header
+========================== */
+
+.code-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#2d2d2d;
+
+    color:#ffffff;
+
+    padding:10px 15px;
+
+    border-radius:10px 10px 0 0;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-top:20px;
+
+}
+
+.copy-btn{
+
+    background:transparent;
+
+    color:#d1d5db;
+
+    border:none;
+
+    padding:6px 10px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-size:13px;
+
+    transition:.2s;
+
+}
+
+.copy-btn:hover{
+
+    background:#404040;
+
+    color:white;
+
+}
+
+#lesson-content pre{
+
+    margin:0;
+
+    border-radius:0 0 10px 10px;
+
+}
+/* ==========================
+   Answer Button
+========================== */
+
+#answer-btn{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    box-shadow:0 4px 12px rgba(37,99,235,.18);
+
+}
+
+#answer-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(37,99,235,.28);
+
+}
+
+#answer-btn:active{
+
+    transform:scale(.97);
+
+}
+
+#answer-content{
+
+    margin-top:18px;
+
+}
+/* ==========================
+   Daily HTML Tip
+========================== */
+
+#daily-tip{
+
+    margin:20px 0;
+
+    padding:15px 20px;
+
+    background:#EFF6FF;
+
+    border-left:5px solid #2563EB;
+
+    border-radius:8px;
+
+    color:#1E3A8A;
+
+    font-weight:600;
+
+}
+header{
+    position:relative;
+}
+
+#progress-bar{
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:3px;
+    width:0%;
+    background:white;
+    transition:width .1s linear;
+}
