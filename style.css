@@ -572,3 +572,348 @@ header{
     background:white;
     transition:width .1s linear;
 }
+/* ==========================
+   LIVE PREVIEW CONTAINER
+========================== */
+
+.preview-container{
+
+    margin-top:30px;
+
+    border:2px solid #E5E7EB;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:#FFFFFF;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+/* ==========================
+   PREVIEW HEADER
+========================== */
+
+.preview-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:12px 18px;
+
+    background:#F8FAFC;
+
+    border-bottom:1px solid #E5E7EB;
+
+}
+
+
+/* ==========================
+   BROWSER BUTTONS
+========================== */
+
+.browser-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.browser-buttons span{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    display:block;
+
+}
+
+.red{
+
+    background:#FF5F57;
+
+}
+
+.yellow{
+
+    background:#FEBC2E;
+
+}
+
+.green{
+
+    background:#28C840;
+
+}
+
+
+/* ==========================
+   PREVIEW TITLE
+========================== */
+
+.preview-title{
+
+    flex:1;
+
+    text-align:center;
+
+    font-weight:600;
+
+    color:#475569;
+
+    margin-right:40px;
+
+}
+
+
+/* ==========================
+   PREVIEW OUTPUT
+========================== */
+
+#preview{
+
+    min-height:250px;
+
+    padding:20px;
+
+    background:white;
+
+    color:#111827;
+
+    overflow:auto;
+
+    line-height:1.6;
+
+}
+/* ==========================
+   NOTES SECTION
+========================== */
+
+#notes{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    background:#FFFFFF;
+
+    border:2px solid #E5E7EB;
+
+    border-radius:14px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+#notes-editor{
+
+    width:100%;
+
+    min-height:220px;
+
+    margin-top:18px;
+
+    padding:16px;
+
+    border:2px solid #CBD5E1;
+
+    border-radius:10px;
+
+    resize:vertical;
+
+    font-size:16px;
+
+    font-family:inherit;
+
+    line-height:1.7;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+#notes-editor:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+#notes-status{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#16A34A;
+
+    font-weight:600;
+
+}
+/* ===========================================
+   QUIZ SECTION
+=========================================== */
+
+#quiz{
+
+    margin-top:40px;
+
+}
+
+#quiz h2{
+
+    color:#1E293B;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ===========================================
+   QUIZ CARD
+=========================================== */
+
+#quiz-content{
+
+    background:#1E293B;
+
+    border:1px solid #334155;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+
+/* ===========================================
+   QUESTION
+=========================================== */
+
+#quiz-content h3{
+
+    color:#F8FAFC;
+
+    font-size:22px;
+
+    margin-bottom:24px;
+
+    line-height:1.5;
+
+}
+
+
+/* ===========================================
+   OPTIONS
+=========================================== */
+
+.quiz-option{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 18px;
+
+    margin-bottom:14px;
+
+    border:1px solid #334155;
+
+    border-radius:12px;
+
+    background:#273449;
+
+    color:#F8FAFC;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.quiz-option:hover{
+
+    background:#334155;
+
+    border-color:#3B82F6;
+
+}
+
+.quiz-option input{
+
+    accent-color:#3B82F6;
+
+}
+
+
+/* ===========================================
+   CHECK BUTTON
+=========================================== */
+
+#check-answer-btn{
+
+    margin-top:15px;
+
+    padding:12px 28px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+#check-answer-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* ===========================================
+   RESULT
+=========================================== */
+
+#quiz-result{
+
+    color:#F8FAFC;
+
+}
+
+#quiz-result{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    min-height:28px;
+
+}
