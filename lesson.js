@@ -359,11 +359,11 @@ head: {
 
         "&lt;body&gt;",
 
-        "&lt;meta",
+        "&lt;meta>",
 
-        "&lt;head",
+        "&lt;head>",
         
-        "&lt;header",
+        "&lt;header>",
 
     ],
 
