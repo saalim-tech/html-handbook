@@ -17,14 +17,35 @@ const answerButton = document.getElementById("answer-btn");
 
 const searchBox = document.getElementById("search");
 
+const quizContent = document.getElementById("quiz-content");
+
 const editor = document.getElementById("editor");
 
-const lessonButtons = document.querySelectorAll("aside button");
+const preview = document.getElementById("preview");
+
+const practice = document.getElementById("practice");
+
+const notesSection = document.getElementById("notes");
+
+const notesEditor = document.getElementById("notes-editor");
+
+const notesStatus = document.getElementById("notes-status");
+
+const lessonButtons = document.querySelectorAll("aside button");;
 
 
 /* ---------- Variables ---------- */
 
 let currentLesson = null;
+
+let currentLessonId = "";
+
+const theoryLessons = [
+    "browser",
+    "html",
+    "uses",
+    "roadmap"
+];
 
 
 /* ===========================================
@@ -55,6 +76,10 @@ function loadLesson(id) {
 
     currentLesson = lessons[id];
 
+    currentLessonId = id;
+
+    currentLesson.id = id;
+
     lessonTitle.textContent = currentLesson.title;
 
     lessonContent.innerHTML = currentLesson.content;
@@ -65,13 +90,85 @@ function loadLesson(id) {
 
     answerContent.innerHTML = currentLesson.answer;
 
+    if (currentLesson.quiz) {
+
+    quizContent.innerHTML = `
+
+        <h3>${currentLesson.quiz.question}</h3>
+
+        ${currentLesson.quiz.options.map((option, index) => `
+
+            <label class="quiz-option">
+
+                <input
+                    type="radio"
+                    name="quiz"
+                    value="${index}">
+
+                <span>${option}</span>
+
+            </label>
+
+        `).join("")}
+
+        <button id="check-answer-btn">
+
+            ✅ Check Answer
+
+        </button>
+
+        <p id="quiz-result"></p>
+
+    `;
+
+    const checkButton = document.getElementById("check-answer-btn");
+
+    checkButton.addEventListener("click", checkQuizAnswer);
+
+}
+else {
+
+    quizContent.innerHTML = "";
+
+}
+
     answerContent.hidden = true;
 
     answerButton.textContent = "👁 Show Answer";
 
     highlightButton(id);
 
+    if (theoryLessons.includes(id)) {
+
+    notesSection.style.display = "block";
+
+    document.getElementById("practice").style.display = "none";
+
+} else {
+
+    notesSection.style.display = "block";
+
+    document.getElementById("practice").style.display = "block";
+
+}
+
+// Load saved notes for this lesson
+
+const savedNotes = localStorage.getItem(id + "_notes");
+
+if (savedNotes) {
+
+    notesEditor.value = savedNotes;
+
+} else {
+
+    notesEditor.value = "";
+
+}
+
     editor.value = "";
+
+    preview.innerHTML = "<p>Your output will appear here...</p>";
 }
 
 
@@ -115,6 +212,40 @@ function toggleAnswer() {
         answerContent.hidden = true;
 
         answerButton.textContent = "👁 Show Answer";
+
+    }
+
+}
+
+/* ===========================================
+   Check Quiz Answer
+===========================================*/
+
+function checkQuizAnswer() {
+
+    const selected = document.querySelector(
+        'input[name="quiz"]:checked'
+    );
+
+    const result = document.getElementById("quiz-result");
+
+    if (!selected) {
+
+        result.textContent = "⚠ Please select an option.";
+
+        return;
+
+    }
+
+    if (Number(selected.value) === currentLesson.quiz.answer) {
+
+        result.textContent = "✅ Correct!";
+
+    }
+
+    else {
+
+        result.textContent = "❌ Wrong! Try Again.";
 
     }
 
@@ -166,6 +297,18 @@ function searchLessons() {
     });
 
 }
+/* ===========================================
+   Live Preview
+===========================================*/
+
+function updatePreview() {
+
+    console.log(editor);
+    console.log(editor.value);
+
+   preview.innerHTML = "<h1>" + editor.value + "</h1>";
+
+}
 
 
 /* ===========================================
@@ -173,6 +316,34 @@ function searchLessons() {
 ===========================================*/
 
 searchBox.addEventListener("input", searchLessons);
+
+editor.addEventListener("input", updatePreview);
+
+notesEditor.addEventListener("input", () => {
+
+    localStorage.setItem(
+        currentLessonId + "_notes",
+        notesEditor.value
+    );
+
+    notesStatus.textContent = "💾 Saved";
+
+});
+
+/* ===========================================
+   Auto Save Notes
+===========================================*/
+
+notesEditor.addEventListener("input", () => {
+
+    localStorage.setItem(
+        currentLesson.title + "_notes",
+        notesEditor.value
+    );
+
+    notesStatus.textContent = "💾 Saved";
+
+});
 
 
 /* ===========================================
