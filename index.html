@@ -131,10 +131,58 @@
                 <div id="answer-content" hidden></div>
             </article>
 
-            <article id="practice">
-                <h3>Try It Yourself</h3>
+            <article id="quiz">
 
-                <textarea id="editor" placeholder="Write your HTML code here..."></textarea>
+                <h2>🧠 Quiz</h2>
+
+                <div id="quiz-content"></div>
+
+            </article>
+
+            <article id="practice">
+                <h2>💻 Try It Yourself</h2>
+
+                <p>Write HTML code below and see the live preview.</p>
+
+                <textarea id="editor" placeholder="Type your HTML code here..."></textarea>
+                <div class="preview-container">
+
+                    <div class="preview-header">
+
+                        <div class="browser-buttons">
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                        </div>
+
+                        <span class="preview-title">Live Preview</span>
+
+                    </div>
+
+                    <div id="preview">
+
+                        <p>Your output will appear here...</p>
+
+                    </div>
+
+
+                </div>
+            </article>
+            <article id="notes">
+
+                <h2>📝 My Notes</h2>
+
+                <p>
+                    Write your own notes for this lesson.
+                    They are saved automatically in your browser.
+                </p>
+
+                <textarea id="notes-editor" placeholder="Write your notes here..."></textarea>
+
+                <small id="notes-status">
+                    ✓ Saved
+                </small>
+
             </article>
 
         </section>
