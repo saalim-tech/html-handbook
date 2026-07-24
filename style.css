@@ -771,9 +771,15 @@ header{
 
 #quiz h2{
 
-    color:#1E293B;
+    color: #1E40AF;
 
-    margin-bottom:20px;
+    font-weight: 700;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
 
 }
 
