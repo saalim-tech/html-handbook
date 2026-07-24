@@ -38,7 +38,26 @@ browser: {
             <li>Mozilla Firefox</li>
             <li>Microsoft Edge</li>
         </ul>
-    `
+    `,
+    quiz: {
+
+    question: "Which software is used to open HTML files?",
+
+    options: [
+
+        "Web Browser",
+
+        "Compiler",
+
+        "Code Editor",
+
+        "Database"
+
+    ],
+
+    answer: 0
+
+}
 },
 
 html: {
@@ -78,8 +97,28 @@ html: {
     `,
 
     answer: `
-        <p><strong>HTML stands for HyperText Markup Language.</strong></p>
-    `
+    <p><strong>HTML stands for HyperText Markup Language.</strong></p>
+`,
+
+quiz: {
+
+    question: "What does HTML stand for?",
+
+    options: [
+
+        "HyperText Markup Language",
+
+        "HighText Machine Language",
+
+        "Hyper Tool Markup Language",
+
+        "Home Tool Markup Language"
+
+    ],
+
+    answer: 0
+
+}
 },
 uses: {
     title: "Uses of HTML",
@@ -118,7 +157,26 @@ uses: {
             <li>Create links</li>
             <li>Build forms</li>
         </ul>
-    `
+    `,
+    quiz: {
+
+    question: "HTML is mainly used to create?",
+
+    options: [
+
+        "Web Pages",
+
+        "Games",
+
+        "Operating Systems",
+
+        "Databases"
+
+    ],
+
+    answer: 0
+
+}
 },
     roadmap: {
     title: "HTML Learning Roadmap",
@@ -157,7 +215,26 @@ uses: {
 
     answer: `
         <p><strong>Head Tag</strong></p>
-    `
+    `,
+    quiz: {
+
+    question: "After learning HTML, what should you learn next?",
+
+    options: [
+
+        "CSS",
+
+        "Python",
+
+        "Java",
+
+        "C"
+
+    ],
+
+    answer: 0
+
+}
 },
 
     boilerplate: {
@@ -215,7 +292,22 @@ uses: {
 
 &lt;/html&gt;
 </code></pre>
-    `
+    `,
+    quiz: {question: "Which tag contains all the HTML code?",
+
+  options: [
+
+    "&lt;html&gt;",
+
+    "&lt;head&gt;",
+
+    "&lt;body&gt;",
+
+    "&lt;title&gt;"
+
+],
+
+    answer: 0}
 },
 
 head: {
@@ -258,7 +350,26 @@ head: {
 
     answer: `
         <p><strong>&lt;title&gt;</strong> tag.</p>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag stores metadata like the page title and CSS links?",
+
+    options: [
+
+        "&lt;body&gt;",
+
+        "&lt;meta",
+
+        "&lt;head",
+        
+        "&lt;header",
+
+    ],
+
+    answer: 2
+
+}
 },
 
 body: {
@@ -306,7 +417,26 @@ body: {
 
     answer: `
         <p>Inside the <strong>&lt;body&gt;</strong> tag.</p>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag contains the visible content of a webpage?",
+
+    options: [
+
+        "&lt;head>",
+
+        "&lt;body>",
+
+        "&lt;html>",
+
+        "&lt;main>",
+
+    ],
+
+    answer: 1
+
+}
 },
 
 headings: {
@@ -348,7 +478,26 @@ headings: {
 &lt;h5&gt;Heading 5&lt;/h5&gt;
 &lt;h6&gt;Heading 6&lt;/h6&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which is the largest heading tag in HTML?",
+
+    options: [
+
+        "&lt;h6>",
+
+        "&lt;heading>",
+
+        "&lt;h1>",
+
+        "&lt;head>",
+
+    ],
+
+    answer: 2
+
+}
 },
 
  paragraph: {
@@ -384,7 +533,26 @@ headings: {
 
 &lt;p&gt;I am learning HTML.&lt;/p&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which HTML tag is used to create a paragraph?",
+
+    options: [
+
+        "&lt;text>",
+
+        "&lt;paragraph>",
+
+        "&lt;p>",
+
+        "&lt;para>",
+
+    ],
+
+    answer: 2
+
+}
 },
 
 formatting: {
@@ -450,7 +618,26 @@ formatting: {
 &lt;i&gt;John&lt;/i&gt;
 &lt;u&gt;John&lt;/u&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag makes text bold with semantic importance?",
+
+    options: [
+
+        "&lt;b>",
+
+        "&lt;strong>",
+
+        "&lt;bold>",
+
+        "&lt;em>"
+
+    ],
+
+    answer: 1
+
+}
 },
 
 comments: {
@@ -486,7 +673,26 @@ comments: {
     answer: `
 <pre><code>&lt;!-- This is my first HTML comment --&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which syntax is used to write an HTML comment?",
+
+    options: [
+
+        "// Comment",
+
+        "/* Comment */",
+
+        "&lt;!-- Comment -->",
+
+        "# Comment"
+
+    ],
+
+    answer: 2
+
+}
 },
 
 anchor: {
@@ -530,7 +736,26 @@ anchor: {
     Wikipedia
 &lt;/a&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which attribute specifies the destination of a link?",
+
+    options: [
+
+        "src",
+
+        "href",
+
+        "link",
+
+        "target"
+
+    ],
+
+    answer: 1
+
+}
 },
 
 image: {
@@ -580,7 +805,26 @@ image: {
      alt="Nature"
      width="250"&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which HTML tag is used to display an image?",
+
+    options: [
+
+        "&lt;picture>",
+
+        "&lt;img>",
+
+        "&lt;image>",
+
+        "&lt;src>"
+
+    ],
+
+    answer: 1
+
+}
 },
 "ordered-list": {
     title: "Ordered List",
@@ -619,7 +863,26 @@ image: {
     &lt;li&gt;Physics&lt;/li&gt;
 &lt;/ol&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag creates a numbered list?",
+
+    options: [
+
+        "&lt;ul>",
+
+        "&lt;dl>",
+
+        "&lt;ol>",
+
+        "&lt;li>"
+
+    ],
+
+    answer: 2
+
+}
 },
 "unordered-list": {
     title: "Unordered List",
@@ -659,7 +922,26 @@ image: {
     &lt;li&gt;Mango&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag creates a bulleted list?",
+
+    options: [
+
+        "&lt;ol>",
+
+        "&lt;ul>",
+
+        "&lt;li>",
+
+        "&lt;list>"
+
+    ],
+
+    answer: 1
+
+}
 },
 "description-list": {
     title: "Description List",
@@ -708,7 +990,26 @@ image: {
     &lt;dd&gt;Styles webpage design&lt;/dd&gt;
 &lt;/dl&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag is used to create a description list?",
+
+    options: [
+
+        "&lt;dl>",
+
+        "&lt;ol>",
+
+        "&lt;ul>",
+
+        "&lt;dt>"
+
+    ],
+
+    answer: 0
+
+}
 },
 table: {
     title: "HTML Table",
@@ -766,7 +1067,26 @@ table: {
     &lt;/tr&gt;
 &lt;/table&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which HTML tag is used to create a table?",
+
+    options: [
+
+        "&lt;table>",
+
+        "&lt;tr>",
+
+        "&lt;td>",
+
+        "&lt;th>"
+
+    ],
+
+    answer: 0
+
+}
 },
 form: {
     title: "HTML Form",
@@ -842,7 +1162,26 @@ form: {
 
 &lt;/form&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which HTML tag is used to create a form?",
+
+    options: [
+
+        "&lt;input>",
+
+        "&lt;form>",
+
+        "&lt;label>",
+
+        "&lt;fieldset>"
+
+    ],
+
+    answer: 1
+
+}
 },
 header: {
     title: "Header Tag",
@@ -877,7 +1216,26 @@ header: {
     &lt;h1&gt;My Website&lt;/h1&gt;
 &lt;/header&gt;
 </code></pre>
-    `
+    `,
+     quiz: {
+
+    question: "What is the main purpose of the &lt;header> tag?",
+
+    options: [
+
+        "To create a table header",
+
+        "To contain introductory content of a page or section",
+
+        "To make text larger",
+
+        "To create navigation links",
+
+    ],
+
+    answer: 1
+
+}
 },
 nav: {
     title: "Navigation Tag",
@@ -912,7 +1270,27 @@ nav: {
     &lt;a href="#"&gt;Contact&lt;/a&gt;
 &lt;/nav&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which semantic tag is used to contain navigation links?",
+
+    options: [
+
+        "&lt;menu>",
+
+        "&lt;navigation>",
+
+        "&lt;nav>",
+
+        "&lt;aside>"
+
+    ],
+
+    answer: 2
+
+}
+    
 },
 main: {
     title: "Main Tag",
@@ -945,7 +1323,26 @@ main: {
     &lt;p&gt;Main content&lt;/p&gt;
 &lt;/main&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "What is the purpose of the &lt;section&gt; tag?",
+
+    options: [
+
+        "To store metadata",
+
+        "To contain the main content of the webpage",
+
+        "To create the page title",
+
+        "To display images"
+
+    ],
+
+    answer: 1
+
+}
 },
 section: {
     title: "Section Tag",
@@ -978,7 +1375,26 @@ section: {
     &lt;p&gt;Welcome to my school.&lt;/p&gt;
 &lt;/section&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag contains the complete HTML document?",
+
+    options: [,
+
+        "&lt;html&gt;",
+
+        "&lt;head&gt;",
+
+        "&lt;body&gt;",
+
+        "&lt;title&gt;",
+
+    ],
+
+    answer: 0
+
+},
 },
 article: {
     title: "Article Tag",
@@ -1011,7 +1427,26 @@ article: {
     &lt;p&gt;Today's news...&lt;/p&gt;
 &lt;/article&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "Which tag is best used for an independent blog post or news article?",
+
+    options: [
+
+        "&lt;section&gt;",
+
+        "&lt;div&gt;",
+
+        "&lt;article&gt;",
+
+        "&lt;main"
+
+    ],
+
+    answer: 2
+
+}
 },
 aside: {
     title: "Aside Tag",
@@ -1044,7 +1479,26 @@ aside: {
     &lt;p&gt;Practice daily.&lt;/p&gt;
 &lt;/aside&gt;
 </code></pre>
-    `
+    `,
+    quiz: {
+
+    question: "The &lt;aside&gt; tag is mainly used for?",
+
+    options: [
+
+        "Main page content",
+
+        "Navigation links",
+
+        "Content related to the main content, like a sidebar",
+
+        "Creating forms"
+
+    ],
+
+    answer: 2
+
+}
 },
 footer: {
     title: "Footer Tag",
@@ -1079,7 +1533,25 @@ footer: {
     &lt;p&gt;© 2026 John&lt;/p&gt;
 &lt;/footer&gt;
 </code></pre>
-    `
+    `,quiz: {
+
+    question: "What information is commonly placed inside a &lt;footer&gt;?",
+
+    options: [
+
+        "The page title",
+
+        "Navigation menu",
+
+        "Copyright and contact information",
+
+        "The main article"
+
+    ],
+
+    answer: 2
+
+}
 },
 
 
